@@ -59,8 +59,14 @@ void operacionTransporte(){
         printf("1. Urbana\n");
         printf("2. Interurbana\n");
         printf("3. Internacional\n");
-        printf("Ingrese el tipo de ruta.\n");
-        scanf("%d",&ruta);
+        do{
+            printf("Ingrese el tipo de ruta.\n");
+            scanf("%d",&ruta);
+            if(ruta<1 || ruta>3){
+                printf("Dato invalido.\n");
+            }
+        }while(ruta<1 || ruta>3);
+
         do{
             printf("Ingrese el numero de kilometros.\n");
             scanf("%f",&km);
@@ -85,8 +91,13 @@ char cont[200];
   e = 0;
   p = 0;
     for(i=1;i<=5;i++){
-        printf("Elija el tipo de publicacion.\n1.Noticias\n2.Eventos\n3.Preguntas\n");
-        scanf("%d",&cat);
+        do{
+            printf("Elija el tipo de publicacion.\n1.Noticias\n2.Eventos\n3.Preguntas\n");
+            scanf("%d",&cat);
+            if(cat<1 || cat>3){
+                printf("Dato invalido.\n");
+            }
+        }while(cat<1||cat>3);
         if(cat==1){
             n = n+1;
         }else{
